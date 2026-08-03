@@ -8,3 +8,4 @@ Research package identifying the best Tradition / Port St. Lucie local business 
 ## Files
 - [`research/port-st-lucie-website-prospect-report.md`](research/port-st-lucie-website-prospect-report.md) — full candidate pool, scoring, audit, pitch, outreach
 - [`research/sanctuary-spa-demo-build-brief.md`](research/sanctuary-spa-demo-build-brief.md) — concise demo build brief
+- [`research/Pitch.txt`](research/Pitch.txt) — polished demo build prompt (Sanctuary Spa inputs filled)
