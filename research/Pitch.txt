@@ -1,0 +1,274 @@
+# Sanctuary Spa Demo — Build Prompt (Polished)
+
+You are a world-class creative director, conversion-focused web strategist, senior UX/UI designer, and elite front-end engineer.
+
+Design and build a premium website demo for the selected target business using the design quality standard and design strategy direction of austin.fluxlab.agency.
+
+This is not a generic local business site.
+It should feel like a premium, modern, highly intentional, sales-capable demo that shows what our agency is capable of.
+
+---
+
+## IMPORTANT CONTEXT
+
+Use a modern front-end stack. Reflect that in the design and build.
+
+### Development stack
+- Next.js
+- React
+- Tailwind CSS
+- TypeScript
+- App Router
+- Reusable components
+- Modern animation/motion libraries when useful
+- Responsive design
+- WCAG-conscious accessible implementation
+- Fast-loading, production-grade front-end patterns
+
+This prompt is for DEVELOPMENT + DESIGN.
+Do not explain internal business software.
+Focus on website stack, front-end architecture, styling system, UX, and implementation quality.
+
+---
+
+## PROJECT INPUTS
+
+- **Business name:** The Sanctuary Spa at Tradition
+- **Website URL:** https://www.sanctuaryspatradition.com/
+- **Industry:** Luxury day spa / wellness / beauty
+- **Location:** 1555 NW St Lucie West Blvd, Suite 101, Port St. Lucie, FL 34986 (St. Lucie West; Tradition brand heritage; formerly Tradition Square). Corner of Country Club Drive & St. Lucie West Blvd, Coldwell Banker building.
+- **Phone:** (772) 345-7727
+- **Concierge text:** (772) 206-0285
+- **Hours:** Tue 10–4 · Wed 10–5 · Thu 10–6 · Fri–Sat 10–5 · Sun–Mon closed
+- **Main services:** Massage therapy, European & clinical facials, anti-aging treatments, body rituals, manicures & pedicures, waxing, makeup artistry, cryotherapy, Japanese head spa & foot spa, spa packages, memberships, gift certificates
+- **Target audience:** Affluent women and couples in Tradition, St. Lucie West, PGA Village, and Torino; gift buyers; membership seekers; bridal / special-occasion clients
+- **Main conversion goal:** Bookings (appointment requests) — phone as strong alternate
+- **Secondary conversion goal:** Gift certificate purchases; membership inquiries
+- **Offer emphasis:** Calm luxury spa experience — Book an Appointment + Purchase a Gift Certificate. Lead with 20 years of care, expanded 2,500 sq ft facility, and signature experiences (Couples Journey, Head Spa, Day at The Spa packages)
+- **Competitor notes:** Local alternatives include Sejour Medical Aesthetics (polished medspa), Hand & Stone (franchise polish), Balance Beauty & Wellness (smaller/dated), hotel spas. Sanctuary’s edge is longevity, classic full day-spa menu, couples/packages, and family-owned hospitality — not injectables-first medspa energy.
+- **Key weaknesses in current website:**
+  - Mid-2000s HTML-table layout that reads like a print flyer
+  - Primary booking CTA is a raw pasted Jotform URL
+  - Weak mobile experience; dense uncategorized service/price walls
+  - ~300+ Google reviews not surfaced on-site
+  - Gift certificates presented as an undifferentiated price grid
+  - New St. Lucie West location not hero-level clear; Tradition Square listings still circulate
+  - About page is mostly policies, not brand story
+  - Membership page underbuilt
+- **Recommended pitch angle:** “Your spa already feels premium in person. Your website still asks people to book through a pasted form link. This demo matches the in-person experience — calm, modern, mobile-first — with Book and Gift Certificate obvious on phone.”
+- **Recommended design direction:** Soft spa luxury — warm stone, sage, cream, deep charcoal text. Editorial serif + clean sans. Full-bleed calm photography as the dominant visual plane. Gentle, intentional motion (2–3 effects). Premium and restrained. Not purple gradients, not dark neon medspa, not sterile medical white, not card-grid hero clutter.
+- **Pages/sections to include:**
+  1. Home
+  2. Services (Massage · Facials · Body · Nails · Specialty)
+  3. Packages & Gifts
+  4. About
+  5. Book / Contact
+  6. FAQ (policies softened into answers)
+- **Special requirements:** Strong booking CTA hierarchy · gift certificate path · trust/reviews strip · location/map clarity for new address · mobile sticky Book/Call · facility atmosphere imagery · scannable service categories · light intentional motion · SEO-conscious service naming for Port St. Lucie / Tradition / St. Lucie West
+- **Things to avoid:** Raw third-party form URLs as CTAs · HTML-table feel · endless uncategorized price lists · purple AI spa clichés · dark neon medspa look · overcrowded first viewport · detached floating badges on hero media · generic 3-column icon grids · overrounded SaaS cards · fake urgency · franchise gloss that erases the family-owned story
+
+---
+
+## REFERENCE DIRECTION
+
+Use austin.fluxlab.agency as the standard for design ambition, polish, pacing, premium feel, and conversion-aware presentation.
+
+Do NOT copy it literally.
+Extract its design strategy and apply the same taste, structure, modernity, and confidence to a luxury spa — not an auto shop aesthetic.
+
+### Design strategy to apply
+- Premium and modern visual language
+- Strong hierarchy and section rhythm
+- Clean but high-end composition
+- Purposeful motion and interaction
+- Editorial-level spacing and typography discipline
+- Strong CTA strategy (Book primary, Gift secondary, Call always available)
+- High trust presentation (20 years · 4.4★ / 300+ reviews · expanded facility · family-owned)
+- Clear service positioning by how locals search and book
+- Custom-feeling layout, not template repetition
+- Believable local-business upgrade that still feels elite
+
+---
+
+## PHASE 1 — UNDERSTAND BEFORE BUILDING
+
+Before coding:
+1. Summarize the business context.
+2. Summarize the weaknesses of the current website.
+3. Summarize the most compelling redesign opportunity.
+4. Define the ideal positioning for the new demo.
+5. Propose the visual direction in a few lines.
+6. Propose the sitemap / page structure.
+7. Propose the section structure for the homepage.
+8. Then create a build plan.
+
+Do not jump straight into implementation until the plan is coherent.
+
+### Expected positioning for this demo
+Sanctuary is St. Lucie’s long-standing luxury day spa — 20 years of calm, now in an expanded St. Lucie West suite — where booking and gifting feel as considered as the treatments.
+
+### Expected homepage section map
+1. **Hero** — Brand-forward, full-bleed atmosphere, one headline, one support line, Book + Gift CTAs only (no stats strip, no promo clutter)
+2. **Trust strip** — 4.4★ / 300+ reviews · 20 years · 2,500 sq ft · Family-owned
+3. **Featured experiences** — Couples Journey, Head Spa, Signature Facial, Day at The Spa
+4. **Services overview** — Categorized entry points (not a price wall)
+5. **Why Sanctuary** — Longevity, hospitality, expanded space, Tradition → St. Lucie West continuity
+6. **Reviews** — Real-feeling local quotes + rating proof
+7. **Gifts & memberships** — Guided gift path + membership tease
+8. **Visit** — New address, hours, map, phone, concierge text
+9. **Final CTA** — Book / Gift / Call
+10. **Footer** — NAP, hours, licenses (MM17617), policies link
+
+---
+
+## PHASE 2 — DESIGN SYSTEM FIRST
+
+Establish the design system before building pages.
+
+Define:
+- Brand-aligned color palette (warm stone, sage, cream, charcoal — restrained)
+- Surface hierarchy
+- Typography pairing (expressive editorial serif + clean sans; avoid Inter/Roboto/Arial/system defaults)
+- Type scale
+- Spacing scale
+- Radius rules (restrained; not pill-everything)
+- Border/shadow treatment (minimal; no multi-layer glow stacks)
+- Button/input styles (primary Book, secondary Gift, tertiary Call)
+- Hover/focus/active states
+- Light approach by default (soft luxury, not dark mode)
+
+Use a disciplined design system:
+- Tailwind classes map to consistent tokens and repeated patterns
+- Avoid arbitrary one-off styling
+- Reuse through components
+- Keep visual consistency across the whole site
+
+### Design standards
+- Premium but commercially effective
+- Mobile-first and responsive
+- WCAG-conscious: semantic structure, keyboard clarity, visible focus states
+- Clear conversion hierarchy
+- Strong trust signals
+- Fast, clean, believable, modern
+- Clean component architecture
+- Production-quality front-end decisions
+
+### Visual rules
+- Modern spacing and strong alignment
+- Restrained palette
+- Sharp, premium, full-bleed hero (brand is a hero-level signal)
+- Varied section rhythm — not repeated template blocks
+- Motion enhances clarity and presence, not noise
+- Redesign must be visibly stronger than the current site
+
+### Avoid these mistakes
+- Generic AI hero copy
+- Repetitive 3-column feature grids with icons in circles
+- Overuse of gradients/glows
+- Weak spacing or weak type hierarchy
+- Overrounded UI everywhere
+- Generic SaaS sections that don’t fit a spa
+- Unnecessary codebase complexity
+- Bloated component structure for simple sections
+- Purple-on-white / purple-to-indigo defaults
+- Warm cream + terracotta “AI brochure” cliché
+- Dark neon medspa look
+
+---
+
+## PHASE 3 — BUILD USING OUR STACK
+
+Build with:
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Reusable React components
+- App Router
+- Proper project structure
+- Accessible semantic markup
+- Production-friendly front-end practices
+
+Implementation expectations:
+- Organize into reusable sections/components
+- Clean naming
+- Maintainable files
+- Composable layout patterns
+- Next/Image where appropriate
+- Performance-minded throughout
+- Avoid unnecessary client-side bloat
+- Use animation only where it meaningfully improves the result (2–3 intentional motions)
+
+---
+
+## PHASE 4 — WHAT TO BUILD
+
+Create a persuasive multi-page demo, not a single long landing page dump.
+
+### Required pages
+| Page | Purpose |
+|---|---|
+| **Home** | Brand, trust, featured experiences, path to book/gift |
+| **Services** | Scannable categories with clear Book CTAs; sample pricing for key offerings |
+| **Packages & Gifts** | Curated packages + guided gift certificates (not a 20-button grid) |
+| **About** | 20-year story, family-owned, expanded facility, Tradition heritage |
+| **Book / Contact** | Polished request form + phone + hours + map (St. Lucie West address) |
+
+### Required conversion behaviors
+- Primary button always reads as booking intent
+- Gift path is second, never competing visually with Book on every viewport
+- Sticky mobile Book / Call bar
+- No raw external form URLs as visible CTAs (form can post/simulate booking request in-demo)
+- Location block uses the **new** address everywhere
+
+### Content to feature aggressively
+- Couples Journey / Couples Romantic Retreat
+- Japanese Head Spa Experience
+- Day at The Spa / Spa Getaway packages
+- Gift certificates for holidays and birthdays
+- 20 years · expanded 2,500 sq ft · ~4.4★ / 300+ reviews
+
+---
+
+## PHASE 5 — CONTENT STRATEGY
+
+Write demo copy that is:
+- Specific to Sanctuary and Port St. Lucie / Tradition / St. Lucie West
+- Trust-building
+- Conversion-aware
+- Better than the current website’s generic wellness filler
+- Calm, premium, human — not salesy medspa hype
+
+Do not use lazy filler copy.
+If a detail is uncertain, infer intelligently and mark placeholders clearly (e.g., specific therapist names if not confirmed).
+
+### Copy tone
+Quiet confidence. Hospitality over hype. “Come rest” over “transform your life.”
+
+### Example hero direction (do not ship verbatim if you can write stronger)
+- Brand: The Sanctuary Spa at Tradition
+- Headline: Twenty years of calm, now in St. Lucie West.
+- Support: Massage, facials, and full day-spa rituals in an expanded sanctuary — book in minutes, or send the gift of rest.
+- CTAs: Book an Appointment · Purchase a Gift
+
+---
+
+## PHASE 6 — FINAL OUTPUT
+
+Return work in this order:
+1. Creative direction summary
+2. Build plan
+3. Design system summary
+4. File/folder structure
+5. Page/section map
+6. Code implementation
+7. QA checklist
+8. Remaining placeholders or assumptions
+
+---
+
+## QUALITY BAR
+
+This demo should feel like it came from a top-tier agency using modern product-grade front-end practices.
+It must be visibly stronger than sanctuaryspatradition.com in trust, clarity, perceived value, structure, and polish.
+
+The final result should be something we would be proud to host as a live Flux Labs demo — and something the Sanctuary owners would recognize as *their* spa, upgraded.
