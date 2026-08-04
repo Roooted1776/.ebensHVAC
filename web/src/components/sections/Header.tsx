@@ -1,14 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const isHome = pathname === "/";
+  const solid = !isHome || scrolled || open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -16,6 +20,10 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -28,7 +36,7 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,backdrop-filter] duration-300",
-        scrolled || open
+        solid
           ? "bg-ink/95 backdrop-blur-md shadow-md border-b border-line-on-dark"
           : "bg-transparent",
       )}
@@ -109,22 +117,25 @@ export function Header() {
       <div
         id="mobile-nav"
         className={cn(
-          "border-t border-line-on-dark bg-ink lg:hidden",
-          open ? "block" : "hidden",
+          "lg:hidden",
+          open ? "fixed inset-0 top-16 z-40 bg-ink" : "hidden",
         )}
       >
-        <nav className="container-x flex flex-col gap-1 py-4" aria-label="Mobile">
+        <nav
+          className="container-x flex h-[calc(100svh-4rem)] flex-col gap-1 overflow-y-auto py-6"
+          aria-label="Mobile"
+        >
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-[var(--radius-md)] px-3 py-3 text-base font-medium text-paper hover:bg-white/5"
+              className="rounded-[var(--radius-md)] px-3 py-3 text-lg font-medium text-paper hover:bg-white/5"
               onClick={() => setOpen(false)}
             >
               {item.label}
             </Link>
           ))}
-          <div className="mt-3 flex flex-col gap-2 border-t border-line-on-dark pt-4">
+          <div className="mt-auto flex flex-col gap-3 border-t border-line-on-dark pt-6 pb-8">
             <a
               href={site.phoneHref}
               className="rounded-[var(--radius-md)] px-3 py-3 text-base font-semibold text-ice"

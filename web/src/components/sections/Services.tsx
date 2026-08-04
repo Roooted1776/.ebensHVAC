@@ -15,7 +15,7 @@ export function Services() {
           />
         </Reveal>
 
-        <ul className="mt-14 space-y-0 divide-y divide-line border-y border-line">
+        <ul className="mt-10 space-y-0 divide-y divide-line border-y border-line md:mt-12">
           {services.map((service, i) => (
             <li key={service.id}>
               <Reveal delay={i * 0.06}>

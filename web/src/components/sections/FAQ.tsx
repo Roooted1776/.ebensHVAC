@@ -15,7 +15,7 @@ export function FAQ() {
         <Reveal>
           <SectionHeading
             eyebrow="FAQ"
-            title="Quick answers before you book."
+            title="Answers before you book."
             body="Still deciding? Request a window online — we’ll help you choose the right next step."
           />
         </Reveal>
