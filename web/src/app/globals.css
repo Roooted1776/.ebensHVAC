@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  /* Surfaces */
+  --ink: #071820;
+  --ink-elevated: #0e2530;
+  --ink-muted: #1a3a48;
+  --mist: #e8eef1;
+  --paper: #f4f7f8;
+  --white: #ffffff;
+  --line: rgba(7, 24, 32, 0.1);
+  --line-strong: rgba(7, 24, 32, 0.18);
+  --line-on-dark: rgba(244, 247, 248, 0.14);
+
+  /* Brand accents — cool coastal, not SaaS purple */
+  --ice: #5ec4d6;
+  --ice-deep: #2a8fa3;
+  --teal: #0f6b6d;
+  --teal-bright: #1a9a8c;
+  --sand: #c5c0b6;
+  --muted: #5a6d76;
+  --muted-on-dark: #9db0b8;
+  --success: #2d6a4f;
+  --focus: #2a8fa3;
+
+  /* Type */
+  --text: var(--ink);
+  --text-muted: var(--muted);
+  --text-inverse: var(--paper);
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Elevation — single-layer, restrained */
+  --shadow-sm: 0 1px 2px rgba(7, 24, 32, 0.06);
+  --shadow-md: 0 8px 24px rgba(7, 24, 32, 0.08);
+  --shadow-lg: 0 20px 50px rgba(7, 24, 32, 0.12);
+
+  /* Spacing rhythm */
+  --section-y: clamp(4.5rem, 8vw, 7.5rem);
+  --container: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-elevated: var(--ink-elevated);
+  --color-ink-muted: var(--ink-muted);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-white: var(--white);
+  --color-ice: var(--ice);
+  --color-ice-deep: var(--ice-deep);
+  --color-teal: var(--teal);
+  --color-teal-bright: var(--teal-bright);
+  --color-sand: var(--sand);
+  --color-muted: var(--muted);
+  --color-muted-on-dark: var(--muted-on-dark);
+  --color-success: var(--success);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-on-dark: var(--line-on-dark);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-jakarta);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  font-feature-settings: "ss01" on, "cv11" on;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--ice) 45%, transparent);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.container-x {
+  width: min(100% - (var(--gutter) * 2), var(--container));
+  margin-inline: auto;
+}
+
+.section-y {
+  padding-block: var(--section-y);
+}
+
+.display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ice-deep);
+}
+
+.eyebrow-on-dark {
+  color: var(--ice);
+}
+
+.prose-muted {
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 38rem;
+}
+
+/* Atmospheric backgrounds — not flat */
+.surface-mist {
+  background:
+    radial-gradient(120% 80% at 10% 0%, rgba(94, 196, 214, 0.12), transparent 55%),
+    radial-gradient(90% 70% at 100% 20%, rgba(15, 107, 109, 0.08), transparent 50%),
+    var(--mist);
+}
+
+.surface-paper {
+  background:
+    linear-gradient(180deg, rgba(232, 238, 241, 0.55), transparent 28%),
+    var(--paper);
+}
+
+.surface-ink {
+  background:
+    radial-gradient(90% 60% at 80% 0%, rgba(94, 196, 214, 0.18), transparent 50%),
+    radial-gradient(70% 50% at 0% 100%, rgba(15, 107, 109, 0.22), transparent 55%),
+    var(--ink);
+  color: var(--text-inverse);
+}
+
+.hairline {
+  border-color: var(--line);
+}
+
+.hairline-dark {
+  border-color: var(--line-on-dark);
+}
+
+/* Soft grid texture for depth */
+.texture-grid {
+  background-image:
+    linear-gradient(rgba(7, 24, 32, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 24, 32, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.texture-grid-dark {
+  background-image:
+    linear-gradient(rgba(244, 247, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 247, 248, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
