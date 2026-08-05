@@ -28,7 +28,7 @@ export function BookingForm() {
     if (intent === "quote") return "quote";
     if (intent === "maintenance") return "maintenance";
     if (s === "ac" || s === "plumbing" || s === "iaq") return s;
-    return "ac";
+    return "";
   }, [params]);
 
   const [service, setService] = useState(initialService);
@@ -110,6 +110,9 @@ export function BookingForm() {
             value={service}
             onChange={(e) => setService(e.target.value)}
           >
+            <option value="" disabled>
+              Select a service
+            </option>
             {serviceOptions.map((o) => (
               <option key={o.value} value={o.value}>
                 {o.label}
@@ -118,7 +121,10 @@ export function BookingForm() {
           </select>
         </Field>
         <Field label="Timing" htmlFor="urgency" required>
-          <select id="urgency" name="urgency" required className={inputClass} defaultValue="few-days">
+          <select id="urgency" name="urgency" required className={inputClass} defaultValue="">
+            <option value="" disabled>
+              Select timing
+            </option>
             {urgencyOptions.map((o) => (
               <option key={o.value} value={o.value}>
                 {o.label}
